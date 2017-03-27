@@ -1,0 +1,13 @@
+1. Gallant Method 
+A new technique (Gallant, Lambert, Vanstone, 2000) has been
+proposed which speeds up point multiplication of elliptic curves
+having an eciently-computable endomorphism
+
+D:\document\ecc\ECCÊµÏÖÂÛÎÄ×ÊÁÏ\ECCÏà¹ØÂÛÎÄ\software.pdf
+
+2. ¼ÆËãb/a£¬
+¶Ô1/aµÄÔËËã½øĞĞÒ»¸öĞ¡¸Ä¶¯¾Í¿ÉÒÔ¼ÆËãb/a
+D:\document\ecc\ECCÊµÏÖÂÛÎÄ×ÊÁÏ\Ecc Software\Finite Field Arithmetic.pdf
+
+
+

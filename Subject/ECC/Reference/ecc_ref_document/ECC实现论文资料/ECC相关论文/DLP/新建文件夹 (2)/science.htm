@@ -1,0 +1,708 @@
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- static const char articletmpl_sccsId[] = "%W%  %G% %U% --- Retrieved: %H% %T%"; -->
+<!-- TRANSKEY: 08/03/2004 23:11:33 EDT#1862_005#49104#159.226.47.109 -->
+<title>ScienceDirect - 
+
+
+Journal of Discrete Algorithms : 
+
+
+Efficient algorithms for Koblitz curves over fields of characteristic three</title>
+</head>
+
+<link rel="stylesheet" Title="Default Styles" href="http://www.sciencedirect.com/science/page/static/stylesheets/css_txt_v01.css" type="text/css">
+
+<body bgcolor="#ffffff" text="#000000" >
+
+
+<SCRIPT LANGUAGE="Javascript"><!--
+        function openNS(url) {
+                if ((navigator.appName == "Microsoft Internet Explorer") &&
+                        (parseFloat(navigator.appVersion) < 4 ))
+                {
+                        return false;
+                }
+ 
+                var newX=600,newY=400,xOffset=10,yOffset=10;
+                var parms = 'width=' + newX +
+                                ',height=' + newY +
+                                ',screenX='+ xOffset +
+                                ',screenY=' + yOffset +
+                                ',status=yes,toolbar=yes,menubar=yes' +
+                                ',scrollbars=yes,resizable=yes,location=yes';
+                nsWin = window.open(url,'displayWindow',parms);
+                if(navigator.appName != "Microsoft Internet Explorer") {
+                    nsWin.focus();
+                } 
+                return false;
+        }
+
+        function openStrippedNS(url) {
+                if ((navigator.appName == "Microsoft Internet Explorer") &&
+                        (parseFloat(navigator.appVersion) < 4 ))
+                {
+                        return false;
+                }
+
+                var xOffset=10,yOffset=10;
+                var parms = 'screenX='+ xOffset +
+                                ',screenY=' + yOffset +
+                                ',status=yes,toolbar=no,menubar=no' +
+                                ',scrollbars=yes,resizable=yes,location=no';
+                nsWin = window.open(url,'displayWindow',parms);
+                if(navigator.appName != "Microsoft Internet Explorer") {
+                    nsWin.focus();
+                }
+                return false;
+        }
+//--></SCRIPT>
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr>
+    <td nowrap colspan=3>
+      <a href="/science?_ob=HomePageURL&_method=userHomePage&_lg=Y&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=6065e3e2baac916eeee68978f5a07260" border="0" target="_top"><img src="http://www.sciencedirect.com/science/page/static/science/logo.gif" alt="Go to ScienceDirect&reg; Home" border="0"></a>
+      <a href="http://www.sciencedirect.com/science?_ob=ArticleURL&_udi=B758J-4CS4GX8-1&_user=1999482&_coverDate=07%2F02%2F2004&_alid=191106407&_rdoc=10&_fmt=summary&_orig=search&_cdi=12928&_sort=d&_st=4&_docanchor=&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=1c213bd489792e7db2f75bd735a67071#Skip Buttons" target="_top"><img src="/scidirimg/clear.gif" width="10" height="1" border="0" alt="Skip Main Navigation Links"></a>
+    </td>
+    <td bgcolor="#FFFFFF">
+      <img src="/scidirimg/clear.gif" alt="" width="28" height="50">
+    </td>
+
+    <td align="right" nowrap>
+      
+        <meta http-equiv="Set-Cookie" content="BROWSER_SUPPORTS_COOKIES=1; path=/">
+        <table border=0 cellspacing=0 cellpadding=0>
+          <form name="LogonBar" method="post" action="https://www.sciencedirect.com/science/login" target="_top">
+          <tr>
+            <td bgcolor="#ffffff"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+            <td colspan=6 bgcolor="#CECFCE"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+            <td bgcolor="#ffffff"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+          </tr>
+          <tr bgcolor="#EFEBE7" valign=center>
+            <td bgcolor="#CECFCE"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+            <td align=right nowrap><font face="verdana" style="font-size: 8pt; COLOR: #000000;">&nbsp;<b><a href="https://cs.sciencedirect.com/profile/science?_upid=2019623&_return=http%3A%2F%2Fwww.sciencedirect.com%2Fscience%3F_ob%3DArticleURL%26_udi%3DB758J-4CS4GX8-1%26_user%3D1999482%26_coverDate%3D07%252F02%252F2004%26_alid%3D191106407%26_rdoc%3D10%26_fmt%3Dsummary%26_orig%3Dsearch%26_cdi%3D12928%26_sort%3Dd%26_st%3D4%26_docanchor%3D%26_acct%3DC000050602%26_version%3D1%26_urlVersion%3D0%26_userid%3D1999482%26md5%3D1c213bd489792e7db2f75bd735a67071&md5=036b3393955700085f0b7357048e7369" target="_top"><font color="#ff0000">Register</font></a></b> or Login:&nbsp;</font></td>
+            <td align=right nowrap>
+              <input type=text name="userid" value="user name" size=16 style="font-size: 9pt" onfocus="this.value='';"></td><td align=right nowrap><font stype="font-size: 9pt">&nbsp;</font><font face="verdana" style="font-size: 8pt; COLOR: #000000;">Password: </font></td><td align=right nowrap><input type=password name="password" size=10 maxlength=20 style="font-size: 9pt"><font style="font-size: 9pt">&nbsp;</font>
+              <input type="hidden" name="_ob" value="MiamiLogonURL">
+              <input type="hidden" name="targetURL" value="http://www.sciencedirect.com/science?_ob=ArticleURL&_udi=B758J-4CS4GX8-1&_user=1999482&_coverDate=07%2F02%2F2004&_alid=191106407&_rdoc=10&_fmt=summary&_orig=search&_cdi=12928&_sort=d&_st=4&_docanchor=&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=1c213bd489792e7db2f75bd735a67071">
+              <input type="hidden" name="returnURL" value="http://www.sciencedirect.com/science?_ob=ArticleURL&_udi=B758J-4CS4GX8-1&_user=1999482&_coverDate=07%2F02%2F2004&_alid=191106407&_rdoc=10&_fmt=summary&_orig=search&_cdi=12928&_sort=d&_st=4&_docanchor=&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=1c213bd489792e7db2f75bd735a67071">
+            </td>
+            <td><input type=image src="/scidirimg/sci_dir/btn_banner_go.gif" border=0 hspace=2 vspace=2 width=23 height=18 alt="Go"></td>
+            <td>
+              <table>
+                <tr>
+                  <td nowrap><font face="verdana" style="font-size: 8pt; COLOR: #ffffff;">&nbsp;&nbsp;&nbsp;</td>
+                </tr>
+                <tr><td nowrap><font face="verdana" style="font-size: 8pt; COLOR: #ffffff;">&nbsp;&nbsp;&nbsp;</td></tr> 
+          </table>
+            </td> 
+        <td bgcolor="#CECFCE"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+            <td bgcolor="#000000"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+          </tr>
+          <tr>
+            <td bgcolor="#ffffff"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+            <td colspan=6 bgcolor="#CECFCE"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+            <td bgcolor="#000000"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+          </tr>
+          <tr>
+            <td bgcolor="#ffffff"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+            <td colspan=6 bgcolor="#000000"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+            <td bgcolor="#ffffff"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+          </tr>
+          </form>
+        </table>
+      
+    </td>
+  </tr>
+</table>
+
+</tr></table>
+
+<table border="0" cellpadding="0" cellspacing="0" width=100%>
+    <tr>
+      <td valign="bottom" align="left" rowspan=2 nowrap><a href="/science?_ob=HomePageURL&_method=userHomePage&_btn=Y&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=6065e3e2baac916eeee68978f5a07260" target="_top" 
+onmouseover="document.images['home'].src='/scidirimg/sci_dir/nav_homew.gif'"
+onmouseout="document.images['home'].src='/scidirimg/sci_dir/nav_home.gif'"><img src="/scidirimg/sci_dir/nav_home.gif" width="54" height="20"
+      border="0" alt="Home" name="home"></a><img src="/scidirimg/clear.gif" alt="" width=2 height=20 border=0><a href="/science?_ob=MiamiSearchURL&_method=requestForm&_btn=Y&_acct=C000050602&_version=1&_urlVersion=1&_userid=1999482&md5=521f36fab282c55558a1264d4951ab57" target="_top"
+      ><img src="/scidirimg/sci_dir/nav_srchw.gif" alt="Search" width="61" height="20" border="0" name="search"></a><img 
+src="/scidirimg/clear.gif" alt="" width=2 height=20 border=0><a href="/science?_ob=JournalListURL&_type=all&_auth=y&_btn=Y&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=556174f9f617260b6310c0e84077fc14" target="_top"
+      onmouseover="document.images['journal'].src='/scidirimg/sci_dir/nav_jrnlw.gif'"
+      onmouseout="document.images['journal'].src='/scidirimg/sci_dir/nav_jrnl.gif'"><img src="/scidirimg/sci_dir/nav_jrnl.gif" alt="Browse Journals" width="73" height="20" border="0" name="journal"></a><img 
+      src="/scidirimg/clear.gif" alt="" width=2 height=20 border=0><a href="/science?_ob=AbstractDBListURL&_btn=Y&_acct=C000050602&_version=1&_userid=1999482&md5=843ad803a70e5a286620271628337f03" target="_top" onmouseover="document.images['database'].src='/scidirimg/sci_dir/nav_dbw.gif'"
+      onmouseout="document.images['database'].src='/scidirimg/sci_dir/nav_db.gif'"><img src="/scidirimg/sci_dir/nav_db.gif" alt="Browse Abstract Databases"  width="145" height="20" border="0" name="database"></a><img
+src="/scidirimg/clear.gif" alt="" width=2 height=20 border=0><a
+href="/science?_ob=BookListURL&_type=all&_auth=y&_btn=Y&_acct=C000050602&_version=1&_userid=1999482&md5=4357c2da7a595f90cba87173aa3e4615" target="_top"
+onmouseover="document.images['book'].src='/scidirimg/sci_dir/nav_booksw.gif'"
+onmouseout="document.images['book'].src='/scidirimg/sci_dir/nav_books.gif'"><img src="/scidirimg/sci_dir/nav_books.gif" alt="Browse Books" width="56" height="20" border="0" name="book"></a><img 
+      src="/scidirimg/clear.gif" alt="" width=2 height=20 border=0><a href="/science?_ob=RefWorkListURL&_btn=Y&_acct=C000050602&_version=1&_userid=1999482&md5=8cb4085ec65671621042d0032a6d222a" target="_top"
+      onmouseover="document.images['refwork'].src='/scidirimg/sci_dir/nav_rww.gif'"onmouseout="document.images['refwork'].src='/scidirimg/sci_dir/nav_rw.gif'"><img src="/scidirimg/sci_dir/nav_rw.gif" alt="Browse Reference Works" width="130" height="20" border="0" name="refwork"></a><img src="/scidirimg/clear.gif" alt="" width=2 height=20 border=0><a href="/science?_ob=UserSubscriptionURL&_method=begin&_btn=Y&_acct=C000050602&_version=1&_urlVersion=1&_userid=1999482&md5=395878467df122652ea857d5e20425c3" target="_top"
+onmouseover="document.images['account'].src='/scidirimg/sci_dir/nav_profilew.gif'"
+onmouseout="document.images['account'].src='/scidirimg/sci_dir/nav_profile.gif'"><img 
+      src="/scidirimg/sci_dir/nav_profile.gif" width="83" height="20" alt="My Profile" border="0" name="account"></a><img
+      src="/scidirimg/clear.gif" alt="" width=2 height=20 border=0><a href="/science?_ob=MiamiSDIURL&_method=listAlerts&_btn=Y&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=5c70d4cb8b5410163b4c0e32cce90bf5" target="_top"
+onmouseover="document.images['alert'].src='/scidirimg/sci_dir/nav_alertw.gif'"
+onmouseout="document.images['alert'].src='/scidirimg/sci_dir/nav_alert.gif'"><img src="/scidirimg/sci_dir/nav_alert.gif" width="55" height="20" alt="Alerts" border="0" name="alert"></a></td><td align="right" valign="middle" nowrap><img src="/scidirimg/clear.gif" alt="" width=2 height=20 border=0><a href="/science?_ob=HelpURL&_file=browse_open_doc.htm&_btn=Y&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=6bff6061342d5b301a8253a79dcbf67a" target="sdhelp"
+onClick="var helpWin; helpWin=window.open('browse_open_doc.htm','sdhelp','scrollbars=yes,resizable=yes,directories=no,toolbar=no,menubar=no,status=no,width=760,height=570'); helpWin.focus()"
+ onmouseover="document.images['help'].src='/scidirimg/sci_dir/icon_help.gif'"
+ onmouseout="document.images['help'].src='/scidirimg/sci_dir/icon_help.gif'"><img src="/scidirimg/sci_dir/icon_help.gif" alt="Help (Opens New Window)" width="50" height="18" border="0" name="help"></a></td>
+</tr></table>
+<table border=0 cellpadding=0 cellspacing=0 width=100%>
+<tr><td height="5"></td></tr>
+<tr><td><img src="/scidirimg/nav_gap_small.gif" alt="" width=100% height=1></td></tr><tr><td bgcolor="dfdfdf"><a name="Skip Buttons"></a><table bgcolor="EFEBE7" border="0" cellpadding="0" cellspacing="0" width="100%" height="24"><form name="qkSrch" method="get" target="_top" action="/science"><input type="hidden" name="_ob" value="QuickSearchURL"><input type="hidden" name="_method" value="submitForm"><input type="hidden" name="_userid" value="1999482"><input type="hidden" name="_acct" value="C000050602"><input type="hidden" name="Object" value="ArticleURL"><input type="hidden" name="cdi" value="12928"><input type="hidden" name="md5" value="9763a503378518f6d38049fd5c71a28d"><tr><td width="1%" nowrap><font face="verdana" style="font-size: 8pt; COLOR: #000000;">&nbsp;Quick Search:&nbsp;</font></td><td width="1%" nowrap><input type="text" name="sterms" value="" size="32" maxlength="450" style="font-size: 9pt"></td><td width="1%" nowrap><font face="verdana" style="font-size: 8pt; COLOR: #000000;">&nbsp;within&nbsp;</font></td><td width="1%" nowrap><select name="source" size="1" style="font-size: 9pt"><option value="all">All Full-text Sources</option></select></td><td width="1%"><input type="image" src="/scidirimg/btn_banner_go.gif" alt="Go Get Quick Search Results" border="0" hspace=2 vspace=4 width="23" height="18"></td><td width="99%"><img src="/scidirimg/clear.gif" alt="" height="1" width="10"><a href = "/science?_ob=HelpURL&_file=qs_main.htm&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=f272368d9fc8aa5e7ff9ce1f7adc4387" target="sdhelp" onMouseOver = "window.status='Help is Available';return true" onClick="var helpWin; helpWin=window.open('qs_main.htm','sdhelp','scrollbars=yes,resizable=yes,directories=no,toolbar=no,menubar=no,status=no,width=760,height=570'); helpWin.focus()"><img src="/scidirimg/qs_tips.gif" alt="Quick Search searches abstracts, titles, keywords, and authors. Click here for more information." width="82" height="21" border="0"></a></td><td valign="middle" align="left" nowrap><font face="Arial" size="-2">&nbsp;</td></font></tr><tr><td colspan=7 bgcolor="#666666"><img src="/scidirimg/clear.gif" alt="" height="1" width="1"></td></tr></form></table></td></tr>
+
+
+</table>
+
+
+
+
+
+  <table border=0 width=100% cellpadding=0 cellspacing=0>
+    <tr width=100%>
+      
+      
+        <td width="99%" align="right" valign="bottom"><img src="/scidirimg/space.gif" width="1" height="1" border=0 alt=""></td>
+        <td align="left" width="90" height="18" nowrap><a href="/science?_ob=ArticleListURL&_method=list&_ArticleListID=191106407&_sort=d&_st=4&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=e150378b0d98dcf287692b1f7cb80c9e"><img src="/scidirimg/btn_results_list.gif" width=85 height=18 border=0 alt="Results List" vspace="2"></a></td>
+        <td align="right" width="68" height="18" nowrap><a href="/science?_ob=ArticleURL&_udi=B6TYJ-4C237HF-5&_user=1999482&_coverDate=02%2F29%2F2004&_alid=191106407&_rdoc=9&_fmt=low&_orig=search&_cdi=5620&_sort=d&_st=4&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=2bd1109001e22e1a6a1c0dd0b2e66d8e"><img src="/scidirimg/sb_a_prevDoc.gif" width=68 height=18 border=0 alt="Previous" vspace="2"></a></td>
+        
+          <td align="right" height="18" nowrap>&nbsp;<font style="FONT-SIZE: smaller; FONT-FAMILY: Verdana;"><b>10 of 15</b></font>&nbsp;</td>
+        
+        <td align="right" width="68" height="18" nowrap><a href="/science?_ob=ArticleURL&_udi=B6V8G-492V5TV-7&_user=1999482&_coverDate=07%2F31%2F2003&_alid=191106407&_rdoc=11&_fmt=low&_orig=search&_cdi=5870&_sort=d&_st=4&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=42b1cadc1a8f6f55c2058ee4db883da1"><img src="/scidirimg/sb_a_nextDoc.gif" width=68 height=18 border=0 alt="Next" vspace="2"></a></td>
+      
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+<font style="FONT-SIZE: smaller; FONT-FAMILY: Verdana;">
+
+  <a href="/science?_ob=JournalURL&_cdi=12928&_auth=y&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=956ac0237c52b336b959eade8b9ae8eb">
+     
+        <b>
+
+
+Journal of Discrete Algorithms</b>
+     </a>
+  
+
+</font>
+
+
+  <font style="FONT-SIZE: smaller; FONT-FAMILY: Verdana;">
+  
+    
+      
+        <br><font color="#FF0000"><b>Article in Press</b>,</font>
+        <font color="#FF0000">Corrected Proof</font> - <a href="#FCANote">Note to users</a>
+      
+    
+  
+  
+  </font>
+
+  
+
+
+
+
+  
+  
+  <!-- TABLE WITH 'THIS DOCUMENT' AND OTHER INFO -->
+  <table valign=bottom cellpadding=0 cellspacing=0 width=100%><tr><td><img src="/scidirimg/clear.gif" width="1" height="8" border=0 alt=""><br><img src="/scidirimg/sci_dir/line.gif" width="100%" height=5 border=0 alt=""></td></tr></table>
+
+  <table align="right" valign="top" width="230" border="0" cellpadding=0 cellspacing=0>
+    <tr valign="bottom" bgcolor="#DDF8AD">
+      <td height="6" width="6" colspan="2" rowspan="2" bgcolor="#FFFFFF" valign="bottom" align="right"><img src="/scidirimg/sci_dir/corner_top_left_prodcolor.gif" alt="" height="6" width="6"></td>
+      <td height="1" colspan="2" bgcolor="#8CC919"><img height="1" src="/scidirimg/clear.gif" alt="" width="1"></td>
+      <td height="6" width="6" colspan="2" rowspan="2" bgcolor="#FFFFFF" valign="bottom" align="left"><img height="6" src="/scidirimg/sci_dir/corner_top_right_prodcolor.gif" alt="" width="6"></td>
+    </tr>
+    <tr bgcolor="#DDF8AD">
+      <td height="5" colspan="2"><img src="/scidirimg/clear.gif" alt="" height="1" width="1"></td>
+    </tr>
+
+    <tr bgcolor="#DDF8AD">
+      <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1 height=1></td>
+      <td width="5"><img src="/scidirimg/clear.gif" alt=""></td>
+      <td colspan=2 align=left class="txtBold">This Document</td>
+      <td width="5"></td>
+      <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+    </tr>
+    <tr bgcolor="#DDF8AD">
+      <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1></td>
+      <td height="3" colspan="4"><img src="/scidirimg/clear.gif" alt="" height="1" width="1"></td>
+      <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1></td>
+    </tr>
+    <tr>
+      <td colspan="6" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt=""></td>
+    </tr>
+    
+    
+      <tr>
+        <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1 height=1></td>
+        <td width="5"><img src="/scidirimg/clear.gif" alt=""></td>
+        <td width=20 valign=middle align=middle class="txt"><img src="/scidirimg/triang.gif" alt="" width=7 height=11 border=0></td>
+        <td align=left valign=middle class="txt">
+          <b>Abstract</b>
+        </td>
+        <td width="5"><img src="/scidirimg/clear.gif" alt=""></td>
+        <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1 height=1></td>
+      </tr>
+    
+    
+    
+    
+    <tr>
+      <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1></td>
+      <td height="3" colspan="4"><img src="/scidirimg/clear.gif" alt="" height="1" width="1"></td>
+      <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1></td>
+    </tr>
+
+    
+                             
+    
+    
+    
+      <tr>
+        <td colspan="6" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt=""></td>
+      </tr>
+      <tr bgcolor="#DDF8AD">
+        <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1></td>
+        <td height="3" colspan="4"><img src="/scidirimg/clear.gif" alt="" height="1" width="1"></td>
+        <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1></td>
+      </tr>
+      <tr bgcolor="#DDF8AD">
+        <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1 height=1></td>
+        <td width="5"><img src="/scidirimg/clear.gif" alt=""></td>
+        <td colspan=2 align=left class="txtBold">Actions</td>
+        <td width="5"></td>
+        <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+      </tr>
+      <tr bgcolor="#DDF8AD">
+        <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1></td>
+        <td height="3" colspan="4"><img src="/scidirimg/clear.gif" alt="" height="1" width="1"></td>
+        <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1></td>
+      </tr>
+      <tr>
+        <td colspan="6" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt=""></td>
+      </tr>
+      
+        <tr>
+          <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1 height=1></td>
+          <td width="5"><img src="/scidirimg/clear.gif" alt=""></td>
+          <td valign=middle align=middle><img src="/scidirimg/middot.gif" alt="" width=2 height=2></td>
+          <td align=left valign=middle class="txt"><a href="/science?_ob=CitedSearchURL&_method=submitSearch&_udi=B758J-4CS4GX8-1&_alid=191106407&_rdoc=10&_fmt=summary&_orig=search&dest=list&_tockey=%23toc%2312928%239999%23999999999%2399999!&_orig_alid=&sterms=%23refsrchkey%23f%23Blake%239999%23%23%23I%23&source=citedSrcs&_acct=C000050602&_version=1&_userid=1999482&md5=319c510b4861eee135d71f3e73cf315a">Cited By</a></td>
+          <td width="5"></td>
+          <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+        </tr>
+      
+      
+        <tr>
+          <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1 height=1></td>
+          <td width="5"><img src="/scidirimg/clear.gif" alt=""></td>
+          <td valign=middle align=middle><img src="/scidirimg/middot.gif" alt="" width=2 height=2></td>
+          <td align=left valign=middle class="txt"><a href="/science?_ob=CitedSearchURL&_method=submitSearch&_udi=B758J-4CS4GX8-1&_alid=191106407&_rdoc=10&_fmt=summary&_orig=search&dest=save&_tockey=%23toc%2312928%239999%23999999999%2399999!&_orig_alid=&sterms=%23refsrchkey%23f%23Blake%239999%23%23%23I%23&source=citedSrcs&_acct=C000050602&_version=1&_userid=1999482&md5=319c510b4861eee135d71f3e73cf315a">Save as Citation Alert</a></td>
+          <td width="5"></td>
+          <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+        </tr>
+      
+      
+        <tr valign="top">
+          <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1 height=1></td>
+          <td width="5"><img src="/scidirimg/clear.gif" alt=""></td>
+          <td valign=middle align=middle><img src="/scidirimg/middot.gif" alt="" width=2 height=2></td>
+          <td align=left valign=middle class="txt"><a href="/science?_ob=EmailFriendURL&_method=gatherInfo&_ArticleListID=191106407&refSource=abst&_rdoc=10&_acct=C000050602&_version=1&_userid=1999482&md5=dffb9ce4bfe07853826080ce7ca5a969">E-mail Article</a></td>
+          <td width="5"></td>
+          <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+        </tr>
+      
+      
+        <tr valign="top">
+          <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1 height=1></td>
+          <td width="5"><img src="/scidirimg/clear.gif" alt=""></td>
+          <td valign=middle align=middle><img src="/scidirimg/middot.gif" alt="" width=2 height=2></td>
+          <td align=left valign=middle class="txt"><a href="/science?_ob=DownloadURL&_method=confirm&_ArticleListID=191106407&_rdoc=10&_docType=FLA&_acct=C000050602&_version=1&_userid=1999482&md5=033959ad82a91aaaad4099f668556d2d">Export Citation</a></td>
+          <td width="5"></td>
+          <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+        </tr>
+      
+    
+  
+
+    <tr valign="top">
+      <td width="6" height="6" colspan="2" rowspan="2" valign="top" align="right" bgcolor="#FFFFFF"><img src="/scidirimg/sci_dir/corner_bottom_left_wprodcolor.gif" alt="" height="6" width="6"></td>
+      <td height="5" colspan="2"><img src="/scidirimg/clear.gif" alt=""></td>
+      <td width="6" height="6" colspan="2" rowspan="2" valign="top" align="left" bgcolor="#FFFFFF"><img src="/scidirimg/sci_dir/corner_bottom_right_wprodcolor.gif" width="6" height="6"></td>
+    </tr>
+    <tr>
+      <td height="1" colspan="2" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" height="1" width="1"></td>
+    </tr>
+  </table>
+  </table>
+  <!-- END OF TABLE WITH 'THIS DOCUMENT' AND OTHER INFO -->
+
+
+  
+
+
+
+
+  
+    <img src="/scidirimg/clear.gif" width="1" height="10" border=0 alt=""><br><font style="FONT-SIZE: xx-small; font-family:Verdana;"><a href="http://dx.doi.org/10.1016/j.jda.2004.04.011" target="doilink" onClick="var doiWin; doiWin=window.open('http://dx.doi.org/10.1016/j.jda.2004.04.011','doilink','scrollbars=yes,resizable=yes,directories=yes,toolbar=yes,menubar=yes,status=yes'); doiWin.focus()">doi:10.1016/j.jda.2004.04.011</a></font>&nbsp;&nbsp;&nbsp;&nbsp;<a href = "/science?_ob=HelpURL&_file=doi.htm&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=5420cd5a7ec44afb8faae387bb99afd7" target="sdhelp" onMouseOver = "window.status='Help is Available';return true" onClick="var helpWin; helpWin=window.open('doi.htm','sdhelp','scrollbars=yes,resizable=yes,directories=no,toolbar=no,menubar=no,status=no,width=760,height=570'); helpWin.focus()"><img src="/scidirimg/icon_doi.gif" width="136" height="14" alt="How to Cite or Link Using DOI (Opens New Window)" border="0" align="absmiddle"></a>
+  
+
+
+
+  
+  &nbsp;
+
+
+ 
+
+
+
+<br><font style="FONT-SIZE:xx-small;FONT-FAMILY:Verdana, Arial, Helvetica, sans-serif">
+Copyright &copy; 2004 Elsevier B.V. All rights reserved. </font>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>
+<p>Efficient algorithms for Koblitz curves over fields of characteristic three </h2>
+
+
+<strong>
+<p>Ian F. Blake<a name="m4.bcor*"></a><a href="#m4.cor*"><sup><img src="http://www.sciencedirect.com/scidirimg/entities/REcor.gif" alt="Corresponding Author Contact Information" border=0></sup></a><sup>, </sup><a href="mailto:ifblake@comm.utoronto.ca"><sup><img src="http://www.sciencedirect.com/scidirimg/entities/REemail.gif" alt="E-mail The Corresponding Author" border=0></sup></a><sup>, </sup><a href="#aff001"><sup>a</sup></a>, V. Kumar Murty<a href="mailto:murty@math.toronto.edu"><sup><img src="http://www.sciencedirect.com/scidirimg/entities/REemail.gif" alt="E-mail The Corresponding Author" border=0></sup></a><sup>, </sup><a href="#aff002"><sup>b</sup></a> and Guangwu Xu<a href="mailto:gxu@comm.utoronto.ca"><sup><img src="http://www.sciencedirect.com/scidirimg/entities/REemail.gif" alt="E-mail The Corresponding Author" border=0></sup></a><sup>, </sup><a href="#aff003"><sup>c</sup></a> </strong><br>
+
+
+
+<br><a name="aff001"></a><sup>a</sup> Department of Electrical and Computer Engineering, University of Toronto, Toronto, Ontario, Canada, M5S 3G4<br><a name="aff002"></a><sup>b</sup> Department of Mathematics, University of Toronto, Toronto, Ontario, Canada, M5S 3G3<br><a name="aff003"></a><sup>c</sup> Ganita Lab, University of Toronto at Mississauga, Mississauga, Ontario, Canada, L5L 1C6 <br>
+
+
+<br>
+
+Received 19 February 2004;&nbsp; accepted 26 April 2004.&nbsp; Available online 2 July 2004.  
+
+<br clear="all">
+<br><br><div style="margin-left: 25 !important; width: 600px !important">
+<h2>Abstract</h2><p>The nonadjacent form method of Koblitz [Advances in Cryptology (CRYPTO'98), in: Lecture Notes in Comput. Sci., vol. 1462, 1998, pp. 327&#x2013;337] is an efficient algorithm for point multiplication on a family of supersingular curves over a finite field of characteristic 3. In this paper, a further discussion of the method is given. A&nbsp;window nonadjacent form method is proposed and its validity is proved. Efficient reduction and pre-computations are given. Analysis shows that more than 30% of saving can be achieved. 
+
+<p>
+<strong>Author Keywords: </strong>Algorithm; <a name="hit1"></a><font color="#FF0000"><b>Elliptic curves; Cryptography</b></font><a href="#hit2"><img src="/scidirimg/sci_dir/nextterm.gif" alt="next term" width="7" height="11" border="0"></a>; Window nonadjacent expansion 
+
+
+<p>
+, 11Y16, 11Y40, 14G50 
+
+
+<br clear="all">
+<img src="/scidirimg/sci_dir/line.gif" alt="" width="100%" height="5" border="0" alt="">
+</div><br><div style="margin-left: 25 !important; width: 600px !important">
+<p><a name="m4.cor*"></a><a href="#m4.bcor*"><sup><img src="http://www.sciencedirect.com/scidirimg/entities/REcor.gif" alt="Corresponding Author Contact Information" border=0></sup></a>Corresponding author. 
+
+
+
+
+</div><br clear="all">
+
+
+
+
+
+<br>
+
+
+  <table width=100%><tr><td><img src="/scidirimg/sci_dir/line.gif" width="100%" height=5 border=0 alt=""></td></tr></table>
+  <a name = "FCANote"></a><font size = "-1"><b>Note to users:</b>
+  The section "Articles in Press" contains peer reviewed and accepted articles to be published in this journal. When the final article is assigned to an issue of the journal, the "Article in Press" version will be removed from this section and will appear in the associated journal issue. Please be aware that "Articles in Press" do not have all bibliographic details available yet.<br>There are two types of "Articles in Press":<ul><li><b>Uncorrected proofs:</b> these are articles that are not yet finalized and that will be corrected by the authors. Therefore the text could change before final publication. Uncorrected proofs may be temporarily unavailable for production reasons.</li><li><b>Corrected proofs:</b> these are articles containing the authors' corrections. The content of the article will remain unchanged, and further corrections are not possible. The only difference with the finally published article is that specific issue and page numbers have not yet been assigned.</li></ul></font>
+  <br><br>
+
+
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+  <tr>
+    <td colspan=2>
+      <table width=100%><tr><td><img src="/scidirimg/sci_dir/line.gif" width="100%" height=5 border=0 alt=""></td></tr></table>
+    </td>
+  </tr>
+  <tr valign="top">
+    <td>
+    </td>
+    <td>
+      
+        
+        <table align=right valign=top width=230 cellpadding="0" cellspacing="0" border="0">
+    <tr valign="bottom" bgcolor="#DDF8AD">
+      <td height="6" width="6" colspan="2" rowspan="2" bgcolor="#FFFFFF" valign="bottom" align="right"><img src="/scidirimg/sci_dir/corner_top_left_prodcolor.gif" alt="" height="6" width="6"></td>
+      <td height="1" colspan="2" bgcolor="#8CC919"><img height="1" src="/scidirimg/clear.gif" alt=""
+ width="1"></td>
+      <td height="6" width="6" colspan="2" rowspan="2" bgcolor="#FFFFFF" valign="bottom" align="left"><img height="6" src="/scidirimg/sci_dir/corner_top_right_prodcolor.gif" alt="" width="6"></td>
+    </tr>
+    <tr bgcolor="#DDF8AD">
+      <td height="5" colspan="2"><img src="/scidirimg/clear.gif" alt="" height="1" width="1"></td>
+    </tr>
+    <tr bgcolor="#DDF8AD">
+      <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1 height=1></td>
+      <td width="5"><img src="/scidirimg/clear.gif" alt=""></td>
+      <td colspan=2 align=left class="txtBold">This Document</td>
+      <td width="5"></td>
+      <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+    </tr>
+    <tr bgcolor="#DDF8AD">
+      <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1></td>
+      <td height="3" colspan="4"><img src="/scidirimg/clear.gif" alt="" height="1" width="1"></td>
+      <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1></td>
+    </tr>
+    <tr> 
+      <td colspan="6" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt=""></td>
+    </tr>
+    
+    
+      <tr>
+        <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1 height=1></td>     
+        <td width="5"><img src="/scidirimg/clear.gif" alt=""></td>
+        <td width=20 valign=middle align=middle class="txt"><img src="/scidirimg/triang.gif" alt="" width=7 height=11 border=0></td>
+        <td align=left valign=middle>
+          <font face="Verdana,Arial" size="2">
+          <b>Abstract</b>
+          </font>
+        </td>
+        <td width="5"><img src="/scidirimg/clear.gif" alt=""></td>
+        <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1 height=1></td>
+      </tr>
+    
+    
+    
+    
+    <tr>
+      <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1></td>
+      <td height="3" colspan="4"><img src="/scidirimg/clear.gif" alt="" height="1" width="1"></td>
+      <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1></td>
+    </tr>
+
+    
+    
+    
+    
+    
+      <tr>
+        <td colspan="6" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt=""></td>
+      </tr>
+      <tr bgcolor="#DDF8AD">
+        <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1></td>
+        <td height="3" colspan="4"><img src="/scidirimg/clear.gif" alt="" height="1" width="1"></td>
+        <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1></td>
+      </tr>
+      <tr bgcolor="#DDF8AD">
+        <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1 height=1></td>     
+        <td width="5"><img src="/scidirimg/clear.gif" alt=""></td>
+        <td colspan=2 align=left class="txtBold">Actions</td>
+        <td width="5"></td>
+        <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+      </tr>
+      <tr bgcolor="#DDF8AD">
+        <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1></td>
+        <td height="3" colspan="4"><img src="/scidirimg/clear.gif" alt="" height="1" width="1"></td>
+        <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1></td>
+      </tr>
+      <tr>
+        <td colspan="6" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt=""></td>
+      </tr>
+      
+        <tr>
+          <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1 height=1></td>   
+          <td width="5"><img src="/scidirimg/clear.gif" alt=""></td>
+          <td valign=middle align=middle><img src="/scidirimg/middot.gif" alt="" width=2 height=2></td>
+          <td align=left valign=middle class="txt"><a href="/science?_ob=CitedSearchURL&_method=submitSearch&_udi=B758J-4CS4GX8-1&_alid=191106407&_rdoc=10&_fmt=summary&_orig=search&dest=list&_tockey=%23toc%2312928%239999%23999999999%2399999!&_orig_alid=&sterms=%23refsrchkey%23f%23Blake%239999%23%23%23I%23&source=citedSrcs&_acct=C000050602&_version=1&_userid=1999482&md5=319c510b4861eee135d71f3e73cf315a">Cited By</a></td>
+          <td width="5"></td>
+          <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+        </tr>
+      
+      
+        <tr>
+          <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1 height=1></td>   
+          <td width="5"><img src="/scidirimg/clear.gif" alt=""></td>
+          <td valign=middle align=middle><img src="/scidirimg/middot.gif" alt="" width=2 height=2></td>
+          <td align=left valign=middle class="txt"><a href="/science?_ob=CitedSearchURL&_method=submitSearch&_udi=B758J-4CS4GX8-1&_alid=191106407&_rdoc=10&_fmt=summary&_orig=search&dest=save&_tockey=%23toc%2312928%239999%23999999999%2399999!&_orig_alid=&sterms=%23refsrchkey%23f%23Blake%239999%23%23%23I%23&source=citedSrcs&_acct=C000050602&_version=1&_userid=1999482&md5=319c510b4861eee135d71f3e73cf315a">Save as Citation Alert</a></td>
+          <td width="5"></td>
+          <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+        </tr>
+      
+      
+        <tr valign="top">
+          <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1 height=1></td>   
+          <td width="5"><img src="/scidirimg/clear.gif" alt=""></td>
+          <td valign=middle align=middle><img src="/scidirimg/middot.gif" alt="" width=2 height=2></td>
+          <td align=left valign=middle class="txt"><a href="/science?_ob=EmailFriendURL&_method=gatherInfo&_ArticleListID=191106407&refSource=abst&_rdoc=10&_acct=C000050602&_version=1&_userid=1999482&md5=dffb9ce4bfe07853826080ce7ca5a969">E-mail Article</a></td>
+          <td width="5"></td>
+          <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+        </tr>
+      
+      
+        <tr valign="top">
+          <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" width=1 height=1></td>   
+          <td width="5"><img src="/scidirimg/clear.gif" alt=""></td>
+          <td valign=middle align=middle><img src="/scidirimg/middot.gif" alt="" width=2 height=2></td>
+          <td align=left valign=middle class="txt"><a href="/science?_ob=DownloadURL&_method=confirm&_ArticleListID=191106407&_rdoc=10&_docType=FLA&_acct=C000050602&_version=1&_userid=1999482&md5=033959ad82a91aaaad4099f668556d2d">Export Citation</a></td>
+          <td width="5"></td>
+          <td width="1" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" width="1" height="1"></td>
+        </tr>
+      
+    
+    
+
+    <tr valign="top">
+      <td width="6" height="6" colspan="2" rowspan="2" valign="top" align="right" bgcolor="#FFFFFF"><img src="/scidirimg/sci_dir/corner_bottom_left_wprodcolor.gif" alt="" height="6" width="6"></td>
+      <td height="5" colspan="2"><img src="/scidirimg/clear.gif" alt=""></td>
+      <td width="6" height="6" colspan="2" rowspan="2" valign="top" align="left" bgcolor="#FFFFFF"><img src="/scidirimg/sci_dir/corner_bottom_right_wprodcolor.gif" width="6" height="6"></td>
+    </tr>
+    <tr> 
+      <td height="1" colspan="2" bgcolor="#8CC919"><img src="/scidirimg/clear.gif" alt="" height="1" width="1"></td>
+    </tr>
+  </table>
+
+
+<font style="FONT-SIZE: smaller; FONT-FAMILY: Verdana;">
+
+  
+    <b><a href="/science?_ob=JournalURL&_cdi=12928&_auth=y&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=956ac0237c52b336b959eade8b9ae8eb">
+
+
+Journal of Discrete Algorithms</a></b>
+  
+
+</font>
+<br>
+<font style="FONT-SIZE: smaller; FONT-FAMILY: Verdana;">
+
+  
+    
+      <font color="#FF0000"><b>Article in Press, </b></font><font color="#FF0000">Corrected Proof</font>
+    
+  
+
+
+</font>
+
+  
+
+</td>
+</tr>
+</table>
+
+
+
+<br>
+<br>
+
+
+
+<table width=100% cellpadding=0 cellspacing=0 border=0>
+  <tr width="100%">
+    
+      
+        <td width=249 align="right" valign="bottom"><img src="/scidirimg/space.gif" width=249 height=15 border=0 alt=""></td>
+        <td width="99%" align="right" valign="bottom"><img src="/scidirimg/space.gif" width=1 height=1 border=0 alt=""></td>
+        <td align="left" width="90" height="18" nowrap><a href="/science?_ob=ArticleListURL&_method=list&_ArticleListID=191106407&_sort=d&_st=4&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=e150378b0d98dcf287692b1f7cb80c9e"><img src="/scidirimg/btn_results_list.gif" width=85 height=18 border=0 alt="Results List" vspace="2"></a></td><td align="right" width="68" height="18" nowrap><a href="/science?_ob=ArticleURL&_udi=B6TYJ-4C237HF-5&_user=1999482&_coverDate=02%2F29%2F2004&_alid=191106407&_rdoc=9&_fmt=low&_orig=search&_cdi=5620&_sort=d&_st=4&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=2bd1109001e22e1a6a1c0dd0b2e66d8e"><img src="/scidirimg/sb_a_prevDoc.gif" width=68 height=18 border=0 alt="Previous" vspace="2"></a></td><td align="right" height="18" nowrap>&nbsp;<font style="FONT-SIZE: smaller; FONT-FAMILY: Verdana;"><b>10 of 15</b></font>&nbsp;</td><td align="right" width="68" height="18" nowrap><a href="/science?_ob=ArticleURL&_udi=B6V8G-492V5TV-7&_user=1999482&_coverDate=07%2F31%2F2003&_alid=191106407&_rdoc=11&_fmt=low&_orig=search&_cdi=5870&_sort=d&_st=4&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=42b1cadc1a8f6f55c2058ee4db883da1"><img src="/scidirimg/sb_a_nextDoc.gif" width=68 height=18 border=0 alt="Next" vspace="2"></a></td>
+      
+    
+  </tr>
+</table>
+
+
+
+
+ 
+<table border=0 cellpadding=0 cellspacing=0 width=100%><tr><td height=5 valign=top><img src="/scidirimg/nav_gap_small.gif" alt="" width=100% height=1></td></table>
+<table border="0" cellpadding="0" cellspacing="0" width=100%>
+    <tr>
+      <td valign="middle" align="left" nowrap><a href="/science?_ob=HomePageURL&_method=userHomePage&_btn=Y&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=6065e3e2baac916eeee68978f5a07260" target="_top"
+onmouseover="document.images['bhome'].src='/scidirimg/sci_dir/nav_homew.gif'"
+onmouseout="document.images['bhome'].src='/scidirimg/sci_dir/nav_home.gif'"><img src="/scidirimg/sci_dir/nav_home.gif" width="54" height="20" border="0" alt="Home" name="bhome"></a><img 
+src="/scidirimg/clear.gif" alt="" width=2 height=20 border=0><a href="/science?_ob=MiamiSearchURL&_method=requestForm&_btn=Y&_acct=C000050602&_version=1&_urlVersion=1&_userid=1999482&md5=521f36fab282c55558a1264d4951ab57" target="_top"
+><img
+      src="/scidirimg/sci_dir/nav_srchw.gif" alt="Search" width="61" height="20" border="0" name="bsearch"></a><img src="/scidirimg/clear.gif" alt="" width=2 height=20 border=0><a href="/science?_ob=JournalListURL&_type=all&_auth=y&_btn=Y&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=556174f9f617260b6310c0e84077fc14" target="_top"
+onmouseover="document.images['bjournal'].src='/scidirimg/sci_dir/nav_jrnlw.gif'"
+onmouseout="document.images['bjournal'].src='/scidirimg/sci_dir/nav_jrnl.gif'"><img src="/scidirimg/sci_dir/nav_jrnl.gif" alt="Browse Journals" width="73" height="20" border="0" name="bjournal"></a><img 
+src="/scidirimg/clear.gif" alt="" width=2 height=20 border=0><a href="/science?_ob=AbstractDBListURL&_btn=Y&_acct=C000050602&_version=1&_userid=1999482&md5=843ad803a70e5a286620271628337f03" target="_top" 
+	onmouseover="document.images['bdatabase'].src='/scidirimg/sci_dir/nav_dbw.gif'" onmouseout="document.images['bdatabase'].src='/scidirimg/sci_dir/nav_db.gif'"><img 
+	src="/scidirimg/sci_dir/nav_db.gif" alt="Browse Abstract Databases"  width="145" height="20" border="0" name="bdatabase""></a><img
+src="/scidirimg/clear.gif" alt="" width=2 height=20 border=0><a
+href="/science?_ob=BookListURL&_type=all&_auth=y&_btn=Y&_acct=C000050602&_version=1&_userid=1999482&md5=4357c2da7a595f90cba87173aa3e4615" target="_top"
+onmouseover="document.images['bbook'].src='/scidirimg/sci_dir/nav_booksw.gif'"
+onmouseout="document.images['bbook'].src='/scidirimg/sci_dir/nav_books.gif'"><img src="/scidirimg/sci_dir/nav_books.gif" alt="Browse Books" width="56" height="20" border="0" name="bbook"></a><img 
+	src="/scidirimg/clear.gif" alt="" width=2 height=20 border=0><a href="/science?_ob=RefWorkListURL&_btn=Y&_acct=C000050602&_version=1&_userid=1999482&md5=8cb4085ec65671621042d0032a6d222a" target="_top"
+      onmouseover="document.images['brefwork'].src='/scidirimg/sci_dir/nav_rww.gif'" onmouseout="document.images['brefwork'].src='/scidirimg/sci_dir/nav_rw.gif'"><img 
+      src="/scidirimg/sci_dir/nav_rw.gif" alt="Browse Reference Works" width="130" height="20" border="0" name="brefwork"></a><img src="/scidirimg/clear.gif" alt="" width=2 height=20 border=0><a href="/science?_ob=UserSubscriptionURL&_method=begin&_btn=Y&_acct=C000050602&_version=1&_urlVersion=1&_userid=1999482&md5=395878467df122652ea857d5e20425c3" target="_top"
+onmouseover="document.images['baccount'].src='/scidirimg/sci_dir/nav_profilew.gif'"
+onmouseout="document.images['baccount'].src='/scidirimg/sci_dir/nav_profile.gif'"><img src="/scidirimg/sci_dir/nav_profile.gif" width="83" height="20" alt="My Profile" border="0" name="baccount"></a><img
+      src="/scidirimg/clear.gif" alt="" width=2 height=20 border=0><a href="/science?_ob=MiamiSDIURL&_method=listAlerts&_btn=Y&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=5c70d4cb8b5410163b4c0e32cce90bf5" target="_top"
+onmouseover="document.images['balert'].src='/scidirimg/sci_dir/nav_alertw.gif'"
+onmouseout="document.images['balert'].src='/scidirimg/sci_dir/nav_alert.gif'"><img src="/scidirimg/sci_dir/nav_alert.gif" width="55"
+      height="20" alt="Alerts" border="0" name="balert"></a></td><td valign=top align=right></td><td align="right" valign="top" nowrap><a href="/science?_ob=HelpURL&_file=browse_open_doc.htm&_btn=Y&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=6bff6061342d5b301a8253a79dcbf67a" target="sdhelp" 
+onClick="var helpWin; helpWin=window.open('browse_open_doc.htm','sdhelp','scrollbars=yes,resizable=yes,directories=no,toolbar=no,menubar=no,status=no,width=760,height=570'); helpWin.focus()"
+onmouseover="document.images['bhelp'].src='/scidirimg/sci_dir/icon_help.gif'"
+onmouseout="document.images['bhelp'].src='/scidirimg/sci_dir/icon_help.gif'"><img 
+src="/scidirimg/sci_dir/icon_help.gif" alt="Help (Opens New Window)" width="50" height="18" border="0" name="bhelp"></a>
+</td></tr></table>
+
+<br>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr valign=top><td><font face="Verdana" style="font-size:8pt;">
+  
+    
+       <p><a href="/science?_ob=MiamiCommentURL&_method=comment&_acct=C000050602&_version=1&_urlVersion=0&_userid=1999482&md5=2c1bc38eaa032788a6a4ba9757462f2e" target="_top">Feedback</a>
+       
+          &nbsp;|&nbsp;
+       
+    
+   
+  
+
+
+
+
+<font face="Verdana" style="font-size:8pt;">
+
+  <a href="/science?_ob=UserSubscriptionURL&_method=displayTerms&_acct=C000050602&_version=1&_urlVersion=1&_userid=1999482&md5=bacbae404d1c69fa4d9b487020b483d7" target="_top">Terms &amp; Conditions</a>
+
+
+  &nbsp;|&nbsp;
+
+
+  <a href="/science?_ob=UserSubscriptionURL&_method=displayPolicy&_acct=C000050602&_version=1&_urlVersion=1&_userid=1999482&md5=e94a81702e6f9c493e399b680131de38" target="_top">Privacy Policy</a>
+
+</font>
+
+</font></td></tr>
+<tr><td height="10"></td></tr>
+<tr><td><font face="Verdana" style="font-size:8pt;">Copyright &copy; 2004 <a href="http://www.elsevier.com" target="_blank">Elsevier B.V.</a> All rights reserved. ScienceDirect&reg; is a registered trademark of Elsevier B.V.</font></td>
+
+</tr></table>
+
+</body>
+</html>

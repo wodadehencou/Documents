@@ -1,0 +1,15 @@
+1. Efficient algorithms for elliptic curve Cryptosystems,Advance in Cryptology,Proc.Crypto¡¯97
+
+2. Secure and Efficient Implementations of Elliptic Curve Cryptosystems, 2003
+
+3. Efficient Algorithms for Elliptic Curve Cryptosystems, thesis, 1997
+
+4. Fast Algorithms for Elliptic Curve Cryptosystems over Binary Finite Field,1999
+
+5. Efficient Algorithms for Elliptic Curve Cryptosystems on Embedded Systems, 2001
+
+6. Efficient Algorithms for Finite Fields,with Applications in Elliptic Curve Cryptography, Thesis, 2003
+
+7. Generic GF(2^m ) Arithmetic in Software and its Application to ECC, 2003
+
+
