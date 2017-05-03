@@ -1,0 +1,89 @@
+# Download a net install ISO
+# Install basic system. Set mirror as ftp.cn.debian.org and install XFCE Desktop and enable SSH server
+# Get a snapshort
+# Change appearance: Fonts -> Hinting: Slight; Sub-pixel order: RGB
+# apt-get update & apt-get upgrade
+# Modify /etc/ssh/sshd_config: "PermitRootLogin without-password" -> "PermitRootLogin yes". Enable root ssh login
+# apt-get install gcc g++ sudo zsh git libxss1 build-essential vim vim-gtk lrzsz libltdl-dev make
+# chsh -s /bin/zsh jam
+# usermod -aG sudo jam
+# systemctl set-default multi-user.target
+# git clone https://github.com/racaljk/hosts.git 
+ cat hosts/hosts >> /etc/hosts
+# Get a snapshort
+
+# Install docker. Reference https://docs.docker.com/engine/installation/linux/debian/#install-using-the-repository
+apt-get install \
+     apt-transport-https \
+     ca-certificates \
+     curl \
+     gnupg2 \
+     software-properties-common
+curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/debian \
+   $(lsb_release -cs) \
+   stable"
+apt-get update 
+apt-get install docker-ce
+usermod -aG docker jam
+# Modify /lib/systemd/system/docker.service Line dockerd
+Add "--registry-mirror=https://gdkkdgjq.mirror.aliyuncs.com"
+Add "--graph /home/docker"
+# Get a snapshort
+
+# Install VSCode
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+apt-get update
+apt-get install code # or code-insiders
+# Get a snapshort
+
+# Install Nodejs 
+curl -sL https://deb.nodesource.com/setup_6.x | bash -
+apt-get install -y nodejs
+# Get a snapshort
+
+# Install RealVNC
+dpkg -i VNC-Server
+vnclicense -add N7N4B-LBJ3Q-J4AYM-BB5MD-X8RYA
+(add 127.0.0.1 debian-8-en in /etc/hosts to fix bug)
+# Get a snapshort
+
+# Install docker-compose
+curl -L https://github.com/docker/compose/releases/download/1.13.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+# Get a snapshort
+
+
+# user env
+git clone https://coding.net/wodadehencou/env.git & cd env & git submodule init & git submodule update & cp ~/env/zsh/zshrc.example ~/.zshrc & cp ~/env/vim/vimrc.example ~/.vimrc
+
+# fonts
+git clone https://github.com/powerline/fonts.git
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
+
+# Golang env
+mkdir -p ~/golang/gopath
+install golang
+vim a hello.go and call GoInstallBinaries to install go tools
+go get -u github.com/derekparker/delve/cmd/dlv
+go get -u github.com/aarzilli/gdlv
+go get -u github.com/kardianos/govendor
+
+# npm mirror
+npm config set registry https://registry.npm.taobao.org
+npm config get registry
+
+# Change appearance: Fonts -> Hinting: Slight; Sub-pixel order: RGB
+
+# (Config VSCode)
+
+# Get a snapshort
+
+
+
