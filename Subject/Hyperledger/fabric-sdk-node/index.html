@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Documentation Index</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.cerulean.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Documentation</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-api.html">api</a></li><li><a href="module-fabric-ca-client.html">fabric-ca-client</a></li><li><a href="module-fabric-client.html">fabric-client</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Chain.html">Chain</a></li><li><a href="ChainCodeCBE.html">ChainCodeCBE</a></li><li><a href="Client.html">Client</a></li><li><a href="CouchDBKeyValueStore.html">CouchDBKeyValueStore</a></li><li><a href="CryptoSuite_ECDSA_AES.html">CryptoSuite_ECDSA_AES</a></li><li><a href="EventHub.html">EventHub</a></li><li><a href="FabricCAClient.html">FabricCAClient</a></li><li><a href="FabricCAServices.html">FabricCAServices</a></li><li><a href="KeyValueStore.html">KeyValueStore</a></li><li><a href="module-api.CryptoSuite.html">api.CryptoSuite</a></li><li><a href="module-api.Key.html">api.Key</a></li><li><a href="module-api.KeyValueStore.html">api.KeyValueStore</a></li><li><a href="Peer.html">Peer</a></li><li><a href="Remote.html">Remote</a></li><li><a href="User.html">User</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html">Global</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+    <section class="readme-section">
+        <article><h2>Hyperledger Fabric Client SDK for Node.js</h2><p><a href="https://jenkins.hyperledger.org/view/fabric-sdk-node/job/fabric-sdk-node-merge-x86_64/"><img src="https://jenkins.hyperledger.org/buildStatus/icon?job=fabric-sdk-node-merge-x86_64" alt="Build Status"></a>
+<a href="http://fabric-sdk-node.readthedocs.io/en/master/?badge=master"><img src="https://readthedocs.org/projects/fabric-sdk-node/badge/?version=master" alt="Documentation Status"></a></p>
+<p>The Hyperledger Fabric Client SDK makes it easy to use APIs to interact with a Hyperledger Fabric blockchain.</p>
+<p>As an application developer, to learn about how to install and use the Node.js SDK, please visit the <a href="http://fabric-sdk-node.readthedocs.io/en/master">SDK documentation</a>.</p>
+<p>This project publishes two separate npm packages:</p>
+<ul>
+<li><code>fabric-client</code> - main client for the Hyperledger Fabric. Applications can use this package to install and instantiate chaincodes, submit transactions and make queries against a Hyperledger Fabric-based blockchain network.</li>
+<li><code>fabric-ca-client</code> - client for the optional component in Hyperledger Fabric, <a href="https://github.com/hyperledger/fabric-ca">fabric-ca</a>. The fabric-ca component allows applications to enroll Peers and application users to establish trusted identities on the blockchain network. It also provides support for pseudonymous transaction submissions with Transaction Certificates. If the target blockchain network is configured with standard Certificate Authorities for trust anchors, the application does not need to use this package.</li>
+</ul>
+<p>The following section targets a current or future contributor to this project itself.</p>
+<h3>Build and Test</h3><p>To build and test, the following pre-requisites must be installed first:</p>
+<ul>
+<li>node runtime version 6.9.x, note that 7.0 is not supported at this point</li>
+<li>npm tool version 3.10.x</li>
+<li>gulp command</li>
+<li>docker (not required if you only want to run the headless tests with <code>npm test-headless</code>, see below)</li>
+</ul>
+<p>Clone the project and launch the following commands to install the dependencies and perform various tasks.</p>
+<p>In the project root folder:</p>
+<ul>
+<li><code>npm install</code> to install dependencies</li>
+<li><code>gulp ca</code> to copy common dependent modules from the <code>fabric-client</code> folder to the <code>fabric-ca-client</code> folder and the installed fabric-ca-client package under <code>node_modules</code></li>
+<li><code>gulp watch</code> to set up watch that updates fabric-ca-client's shared dependencies from fabric-client/lib and updates installed fabric-client and fabric-ca-client modules in node_modules. This command does not return, so you should keep it running in a separate command window as you work on the code and test in another command window</li>
+<li>optionally, <code>gulp doc</code> to generate API docs if you want to review the doc content</li>
+<li><code>npm test-headless</code> to run the headless tests that do not require any additional set up</li>
+</ul>
+<p>The following tests require setting up a local blockchain network as the target. Because v1.0 is still in active development, you still need to build the necessary Docker images needed to run the network. Follow the steps below to set it up.</p>
+<ul>
+<li>You will need the peers, orderers and fabric-ca server (new implementation of the member service) to run the tests. The first two components are from the <em>fabric</em> repository. The fabric-ca server is from the <em>fabric-ca</em> repository.</li>
+<li>git clone both the <em>fabric</em> and <em>fabric-ca</em> repositories into the $GOPATH/src/github.com/hyperledger folder in your native host (MacOS, Windows or Ubuntu, etc).</li>
+</ul>
+<p>You can build the docker images in your native host (Mac, Ubuntu, Windows, etc.):</p>
+<ul>
+<li>If docker is installed and it’s not ‘Docker for Mac/Windows’, uninstall and follow Docker’s clean up instructions to uninstall completely.</li>
+<li>Install <a href="https://docs.docker.com/docker-for-mac/install">‘Docker for Mac’</a> or <a href="https://docs.docker.com/docker-for-windows/install"><code>Docker for Windows</code></a>, or <a href="https://docs.docker.com/engine/installation/linux/ubuntu/#install-docker"><code>Docker on linux</code></a></li>
+<li><p>Only for Mac, you need to install a gnu-compatible version of the <code>tar</code> utility:</p>
+<ul>
+<li>Install Brew: http://brew.sh</li>
+<li>run <code>brew install gnu-tar —-with-default-names</code> in order to swap out Mac's default tar command for a gnu-compliant one needed by chaincode execution on the peers</li>
+</ul>
+</li>
+<li><p>build fabric-ca docker image (new membership service)</p>
+<ul>
+<li>cd `$GOPATH/src/github.com/hyperledger/fabric-ca</li>
+<li>run <code>make docker</code>. For more build instructions see <a href="https://github.com/hyperledger/fabric-ca">fabric-ca README</a></li>
+</ul>
+</li>
+<li>build fabric peer and orderer docker images and other ancillary images<ul>
+<li><code>cd $GOPATH/src/github.com/hyperledger/fabric</code></li>
+<li>run <code>make docker</code> to build the docker images (you may need to run <code>make docker-clean</code> first if you've built before)</li>
+</ul>
+</li>
+<li>go to fabric-sdk-node/test/fixtures<ul>
+<li>run <code>docker-compose up --force-recreate</code> to launch the network</li>
+</ul>
+</li>
+<li>Now you are ready to run the tests:<ul>
+<li>Clear out your previous key value stores that may have cached user enrollment certificates (<code>rm -rf /tmp/hfc-*</code>, <code>rm -rf ~/.hfc-key-store</code>)</li>
+<li>run 'gulp test' to execute the entire test suite (495+ test cases), or you can run them individually</li>
+<li>Test user management by member services with the following tests that exercise the fabric-ca-client package with a KeyValueStore implementations for a file-based KeyValueStore as well as a CouchDB KeyValueStore. To successfully run this test, you must first set up a CouchDB database instance on your local machine. Please see the instructions below.<ul>
+<li><code>test/integration/fabric-ca-services-tests.js</code></li>
+<li><code>test/integration/couchdb-fabricca-tests.js</code></li>
+<li><code>test/integration/cloudant-fabricca-tests.js</code></li>
+</ul>
+</li>
+<li>Test happy path from end to end, run <code>node test/integration/e2e.js</code></li>
+<li>Test end to end one step at a time, make sure to follow this sequence:<ul>
+<li><code>node test/integration/e2e/create-channel.js</code></li>
+<li><code>node test/integration/e2e/join-channel.js</code></li>
+<li><code>node test/integration/e2e/install-chaincode.js</code></li>
+<li><code>node test/integration/e2e/instantiate-chaincode.js</code></li>
+<li><code>node test/integration/e2e/invoke-transaction.js</code></li>
+<li><code>node test/integration/e2e/query.js</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Set Up CouchDB Database for couchdb-fabricca-tests.js</h3><p>The KeyValueStore database implementation is done using <a href="http://couchdb.apache.org/">Apache CouchDB</a>. To quickly set up a database instance on your local machine, pull in the CouchDB Docker image from <a href="https://hub.docker.com/_/couchdb/">Docker hub</a>.</p>
+<pre class="prettyprint source"><code>docker pull couchdb</code></pre><p>Start up the database instance and expose the default port 5984 on the host.</p>
+<pre class="prettyprint source"><code>docker run -d -p 5984:5984 --name my-couchdb couchdb</code></pre><p>Ensure that the Docker container running CouchDB is up.</p>
+<pre class="prettyprint source"><code>docker ps</code></pre><p>You will see output similar to the one below:</p>
+<pre class="prettyprint source"><code>CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+33caf5a80fca        couchdb             &quot;tini -- /docker-entr&quot;   47 hours ago        Up 47 hours         0.0.0.0:5984->5984/tcp   my-couchdb</code></pre><p>Ensure that CouchDB instance is up and ready for requests.</p>
+<pre class="prettyprint source"><code>curl DOCKER_HOST_IP:5984/</code></pre><p>For example, the default <code>DOCKER_HOST_IP</code> on Mac is <code>192.168.99.100</code> or `localhost', therefore the request becomes:</p>
+<pre class="prettyprint source"><code>curl 192.168.99.100:5984/
+or
+curl localhost:5984/</code></pre><p>If the database is up and running, you will receive the following response:</p>
+<pre class="prettyprint source"><code>{
+    &quot;couchdb&quot;: &quot;Welcome&quot;,
+    &quot;uuid&quot;: &quot;01b6d4481b7ff9e6e067d90c6d20aa83&quot;,
+    &quot;version&quot;: &quot;1.6.1&quot;,
+    &quot;vendor&quot;: {
+        &quot;name&quot;: &quot;The Apache Software Foundation&quot;,
+        &quot;version&quot;:&quot;1.6.1&quot;
+    }
+}</code></pre><p>Configurable settings are encapsulated in test/fixtures/couchdb.json and can be overridden with environment variables or command parameters.</p>
+<p>Run the associated unit test with the following command:</p>
+<pre class="prettyprint source"><code>node test/unit/couchdb-fabricca-tests.js</code></pre><h3>Contributor Check-list</h3><p>The following check-list is for code contributors to make sure their changesets are compliant to the coding standards and avoid time wasted in rejected changesets:</p>
+<p>Check the coding styles, run the following command and make sure no ESLint violations are present:</p>
+<ul>
+<li><code>gulp</code></li>
+</ul>
+<p>Run the full unit test bucket and make sure 100% are passing.  Because v1.0 is still in active development, all tests may not pass. You can run each individually to isolate the failure(s):</p>
+<ul>
+<li><code>gulp test</code></li>
+</ul>
+<p>The gulp test command above also generates code coverage reports. Your new code should be accompanied with unit tests and provide 80% line coverage or higher.</p>
+<h3>HFC objects and reference documentation</h3><p>For a high-level design specificiation for Fabric SDKs of all languages, visit <a href="https://docs.google.com/document/d/1R5RtIBMW9fZpli37E5Li5_Q9ve3BnQ4q3gWmGZj6Sv4/edit?usp=sharing">this google doc</a> (Work-In-Progress).</p>
+<p>fabric-client and fabric-ca-client are written in CommonJS modules and take advantage of ECMAScript 2015 class syntax.</p>
+<ul>
+<li>The main top-level class is <strong>Chain</strong>. It is the client's view of a fabric <a href="https://docs.google.com/document/d/1eRNxxQ0P8yp4Wh__Vi6ddaN_vhN2RQHP-IruHNUwyhc/">channel</a>. The SDK allows you to interact with multiple channels. A chain object can be configured with a different ordering service or share a common ordering service, depending on how the target blockchain network is set up. A chain object has a <em>KeyValueStore</em> to store private keys and certificates for authenticated users. Through the chain object the application can perform </li>
+<li>The <strong>KeyValueStore</strong> is a very simple interface which SDK uses to store and retrieve all persistent data. This data includes private keys, so it is very important to keep this storage secure. The default implementation is a simple file-based version found in the <em>FileKeyValueStore</em> class. The SDK also provides an implementation based on CouchDB which can be configured to use a local CouchDB database or a remote deployment including a Cloudant database.</li>
+<li>The <strong>User</strong> class represents an end user who transacts on the chain. The user object must have a valid enrollment configured in order to properly sign transaction requests. The enrollment materials can either be obtained from enrolling with fabric-ca or an external Certificate Authority.</li>
+<li>The <strong>EventHub</strong> class encapsulates the interaction with the network peers' event streams.</li>
+<li>The <strong>FabricCAClientImpl</strong> class provides security and identity related features such as user registration and enrollment, transaction certificate issuance. The Hyperledger Fabric has a built-in implementation that issues <em>ECerts</em> (enrollment certificates) and <em>TCerts</em> (transaction certificates). ECerts are for enrollment identity and TCerts are for transactions.</li>
+</ul>
+<h3>Pluggability</h3><p>HFC defines the following abstract classes for application developers to supply extensions or alternative implementations. For each abstract class, a built-in implementation is included with the ability to load alternative implementations via designated environment variables:</p>
+<ol>
+<li><p>To replace FileKeyValueStore with a different implementation, such as one that saves data to a database, specify &quot;KEY_VALUE_STORE&quot; and provide the full require() path to an alternative implementation of the api.KeyValueStore abstract class.</p>
+</li>
+<li><p>The cryptography suite used by the default implementation uses ECDSA for asymmetric keys cryptography, AES for encryption and SHA2/3 for secure hashes. A different suite can be plugged in with &quot;CRYPTO_SUITE&quot; environment variable specifying full require() path to the alternative implementation of the api.CrytoSuite abstract class.</p>
+</li>
+<li><p>If the user application uses an alternative membership service than the one provided by the component <code>fabric-ca</code>, the client code will likely need to use an alternative client to <code>fabric-ca-client</code> to interact with that membership service.</p>
+</li>
+</ol></article>
+    </section>
+
+
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
+	
+		on April 24th 2017, 5:04:02 pm
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>
